@@ -1,0 +1,8 @@
+main {
+  min-height: 80vh;
+}
+
+h1,
+h2 {
+  margin: 16px auto;
+}
