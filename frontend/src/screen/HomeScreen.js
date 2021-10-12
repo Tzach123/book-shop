@@ -15,6 +15,7 @@ const HomeScreen = ({ match }) => {
   const { loading, books, error } = bookList
 
   useEffect(() => {
+    console.log(listBook(keyword))
     dispatch(listBook(keyword))
   }, [dispatch, keyword])
   return (

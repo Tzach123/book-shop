@@ -1,9 +1,9 @@
 import express from 'express'
 import dotenv from 'dotenv'
 import connectDB from './config/db.js'
-import cors from 'cors'
 import bp from 'body-parser'
 import path from 'path'
+import cookieParser from 'cookie-parser'
 import 'colors'
 
 import userRoutes from './routes/userRoutes.js'
@@ -18,7 +18,7 @@ const app = express()
 
 app.use(bp.json())
 app.use(bp.urlencoded({ extended: true }))
-app.use(cors())
+app.use(cookieParser())
 
 app.use('/api/books', bookRoutes)
 app.use('/api/users', userRoutes)

@@ -7,7 +7,7 @@ import {
   deleteBook,
   updateBook,
 } from '../controllers/bookController.js'
-import { protect, admin } from '../middleware/authMiddleware.js'
+import { protect, admin, protectCookies } from '../middleware/authMiddleware.js'
 
 router.route('/').get(getBooks).post(protect, admin, createBook)
 router
